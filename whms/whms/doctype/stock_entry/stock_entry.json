@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "autoname": "SOE.####",
+ "creation": "2021-08-25 19:08:33.365921",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "warehouse",
+  "from_warehouse",
+  "to_warehouse",
+  "item",
+  "qt",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "type",
+   "options": "ADD\nREMOVE\nMOVE"
+  },
+  {
+   "depends_on": "eval:(doc.type==\"ADD\" ||  doc.type==\"REMOVE\")",
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "warehouse",
+   "mandatory_depends_on": "eval: (doc.type==\"ADD\" || doc.type==\"REMOVE\")",
+   "options": "WH"
+  },
+  {
+   "depends_on": "eval:doc.type==\"MOVE\"",
+   "fieldname": "from_warehouse",
+   "fieldtype": "Link",
+   "label": "from_warehouse",
+   "mandatory_depends_on": "eval:doc.type==\"MOVE\"",
+   "options": "WH"
+  },
+  {
+   "depends_on": "eval:doc.type==\"MOVE\"",
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "label": "to_warehouse",
+   "mandatory_depends_on": "eval:doc.type==\"MOVE\"",
+   "options": "WH"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "item",
+   "options": "item"
+  },
+  {
+   "fieldname": "qt",
+   "fieldtype": "Float",
+   "label": "qt"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "stock_entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-08-26 11:55:28.208783",
+ "modified_by": "Administrator",
+ "module": "Whms",
+ "name": "stock_entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

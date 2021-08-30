@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "creation": "2021-08-25 18:54:06.752099",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "qt"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "item"
+  },
+  {
+   "fieldname": "qt",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "qt"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-08-26 09:46:31.904801",
+ "modified_by": "Administrator",
+ "module": "Whms",
+ "name": "WHi",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

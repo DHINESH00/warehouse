@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "autoname": "field:wh_name",
+ "creation": "2021-08-25 18:52:37.264825",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wh_name",
+  "wh_qt",
+  "wh_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "wh_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "wh_name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "wh_item",
+   "fieldtype": "Table",
+   "label": "wh_item",
+   "options": "WHi"
+  },
+  {
+   "fieldname": "wh_qt",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "wh_qt",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-27 14:18:47.715341",
+ "modified_by": "Administrator",
+ "module": "Whms",
+ "name": "WH",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
